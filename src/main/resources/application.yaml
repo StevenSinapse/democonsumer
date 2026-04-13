@@ -2,13 +2,15 @@ server:
   port: 8089
 spring:
   application:
-    name: demo
+    name: demo-consumer
   datasource:
     url: jdbc:postgresql://localhost:50763/factory
     username: factory
     password: factory
     driver-class-name: org.postgresql.Driver
   jpa:
+    hibernate:
+      ddl-auto: update
     show-sql: false
     properties:
       hibernate:
@@ -18,6 +20,12 @@ spring:
           order_inserts: true
           order_updates: true
   kafka:
-    bootstrap-servers: localhost:9092, localhost:9093, localhost:9094
+    bootstrap-servers: localhost:9092,localhost:9093,localhost:9094
+    consumer:
+      group-id: demo-consumer-group
     admin:
-      auto-create: false
+      auto-create: true
+
+factory:
+  api:
+    base-url: http://localhost:48763
