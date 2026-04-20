@@ -1,7 +1,9 @@
 {
   "permissions": {
     "allow": [
-      "Bash(rm:*)"
+      "Bash(rm:*)",
+      "Read(//c/Users/StevenNGUYEN/Documents/**)",
+      "Bash(xargs grep:*)"
     ]
   }
 }

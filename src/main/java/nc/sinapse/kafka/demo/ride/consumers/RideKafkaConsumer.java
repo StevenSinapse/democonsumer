@@ -21,7 +21,7 @@ public class RideKafkaConsumer {
     private final ProcessRideUseCase processRideUseCase;
     private final AtomicInteger callCount = new AtomicInteger(0);
 
-    @KafkaListener(topics = "ride-published", groupId = "consumer-order-group",
+    /*@KafkaListener(topics = "ride-published", groupId = "consumer-order-group",
             containerFactory = "rideKafkaListenerContainerFactory")
     public void consommer(RideKafkaMessage message, Acknowledgment ack) {
         log.info("[RIDE] #{} rideId={}", callCount.incrementAndGet(), message.rideId());
@@ -30,5 +30,5 @@ public class RideKafkaConsumer {
                 message.from(), message.to(), message.departureTime());
         processRideUseCase.traiter(ride);
         ack.acknowledge();
-    }
+    }*/
 }
