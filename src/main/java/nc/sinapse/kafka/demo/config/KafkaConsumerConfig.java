@@ -2,7 +2,7 @@ package nc.sinapse.kafka.demo.config;
 
 import jakarta.annotation.PostConstruct;
 import nc.sinapse.kafka.demo.ride.consumers.RideKafkaMessage;
-import nc.sinapse.kafka.demo.shared.kafka.ThinEventMessage;
+import nc.sinapse.kafka.demo.shared.processing.ThinEventMessage;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.common.TopicPartition;
 import org.apache.kafka.common.serialization.StringDeserializer;

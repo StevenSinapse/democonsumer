@@ -1,22 +1,25 @@
-package nc.sinapse.kafka.demo.shared.processing;
+package nc.sinapse.kafka.demo.shared.processing.gateways;
 
 import lombok.RequiredArgsConstructor;
-import org.springframework.stereotype.Service;
+import nc.sinapse.kafka.demo.shared.processing.usecases.ProcessedEventRepository;
+import org.springframework.stereotype.Component;
 
 import java.time.Instant;
 import java.util.UUID;
 
-@Service
+@Component
 @RequiredArgsConstructor
-public class ProcessedEventService {
+public class ProcessedEventRepositoryAdapter implements ProcessedEventRepository {
 
     private final ProcessedEventJpaRepository processedEventJpaRepository;
 
-    public boolean dejaTraite(UUID eventId) {
+    @Override
+    public boolean existsById(UUID eventId) {
         return processedEventJpaRepository.existsById(eventId);
     }
 
-    public void marquerCommeTraite(UUID eventId, String topic, UUID entityId, String eventType) {
+    @Override
+    public void save(UUID eventId, String topic, UUID entityId, String eventType) {
         processedEventJpaRepository.save(ProcessedEventJpaEntity.builder()
                 .eventId(eventId)
                 .topic(topic)

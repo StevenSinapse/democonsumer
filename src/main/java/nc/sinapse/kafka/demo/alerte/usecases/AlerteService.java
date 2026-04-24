@@ -5,7 +5,7 @@ import lombok.extern.slf4j.Slf4j;
 import nc.sinapse.kafka.demo.alerte.entities.Alerte;
 import nc.sinapse.kafka.demo.dashboard.usecases.DashboardStreamPort;
 import nc.sinapse.kafka.demo.dashboard.usecases.DashboardUpdate;
-import nc.sinapse.kafka.demo.shared.processing.ProcessedEventService;
+import nc.sinapse.kafka.demo.shared.processing.usecases.ProcessedEventService;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 

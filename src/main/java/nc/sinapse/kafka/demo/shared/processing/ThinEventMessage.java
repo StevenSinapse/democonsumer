@@ -1,4 +1,4 @@
-package nc.sinapse.kafka.demo.shared.kafka;
+package nc.sinapse.kafka.demo.shared.processing;
 
 import java.time.Instant;
 import java.util.UUID;

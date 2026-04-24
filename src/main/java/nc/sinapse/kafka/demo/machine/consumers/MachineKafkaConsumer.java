@@ -3,7 +3,7 @@ package nc.sinapse.kafka.demo.machine.consumers;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import nc.sinapse.kafka.demo.machine.usecases.ProcessMachineUseCase;
-import nc.sinapse.kafka.demo.shared.kafka.ThinEventMessage;
+import nc.sinapse.kafka.demo.shared.processing.ThinEventMessage;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.kafka.annotation.RetryableTopic;
 import org.springframework.kafka.support.Acknowledgment;

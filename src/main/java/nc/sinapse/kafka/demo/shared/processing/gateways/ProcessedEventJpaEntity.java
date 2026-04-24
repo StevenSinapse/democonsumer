@@ -1,4 +1,4 @@
-package nc.sinapse.kafka.demo.shared.processing;
+package nc.sinapse.kafka.demo.shared.processing.gateways;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

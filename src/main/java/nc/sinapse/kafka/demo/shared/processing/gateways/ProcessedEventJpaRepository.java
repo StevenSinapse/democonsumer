@@ -1,4 +1,4 @@
-package nc.sinapse.kafka.demo.shared.processing;
+package nc.sinapse.kafka.demo.shared.processing.gateways;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
